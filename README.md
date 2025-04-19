@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# AI Interview Prep
 
-First, run the development server:
+AI Interview Prep is an AI-powered platform designed to help users prepare for mock interviews using advanced technologies such as AI-driven feedback, real-time data processing, and interview question generation.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **AI Interview Feedback**: Receive real-time feedback on your mock interview performance, powered by AI.
+- **Real-time Interview Question Generation**: Generate interview questions in real-time to simulate mock interviews.
+- **Firebase Integration**: Store and retrieve interview-related data from Firebase for better data management and performance tracking.
+- **Optimized Backend**: Scalable backend built using Node.js to ensure fast response times for interview-related operations.
+- **User Profile Management**: Manage user profiles, interview history, and feedback all in one place.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Frontend**: React, Next.js
+- **Backend**: Node.js, Firebase
+- **AI**: OpenAI, TensorFlow, Gemini
+- **Authentication**: Firebase Authentication
+- **Deployment**: Vercel (Frontend), Firebase (Backend)
 
-## Learn More
+## Installation
 
-To learn more about Next.js, take a look at the following resources:
+To run this project locally, follow these steps:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/tharunj30/AI_interview_prep.git
+   cd AI_interview_prep
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Install dependencies**:
+   Ensure you have Node.js installed. Then, run:
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+3. **Set up Firebase**:
+   - Go to [Firebase Console](https://console.firebase.google.com/).
+   - Create a new project and get the Firebase configuration keys.
+   - Place the configuration in your `.env.local` file as per the following structure:
+     ```bash
+     NEXT_PUBLIC_FIREBASE_API_KEY=<your-api-key>
+     NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=<your-auth-domain>
+     NEXT_PUBLIC_FIREBASE_PROJECT_ID=<your-project-id>
+     NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=<your-storage-bucket>
+     NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=<your-sender-id>
+     NEXT_PUBLIC_FIREBASE_APP_ID=<your-app-id>
+     ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Run the application**:
+   After setting up the environment variables, start the development server:
+   ```bash
+   npm run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5. Open your browser and visit `http://localhost:3000` to see the app in action.
+
+## Usage
+
+- Start by signing up or logging in using Firebase Authentication.
+- Once logged in, you can start taking mock interviews, view interview feedback, and track your progress over time.
+- The AI will generate interview questions, and you will receive automated feedback based on your answers.
+
+## Contributing
+
+We welcome contributions! If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/feature-name`).
+3. Commit your changes (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature/feature-name`).
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Feel free to check out our repository for more detailed documentation, and stay tuned for new features and updates!
+
+---
+
+To checkout the website in realtime visit `https://ai-interview-prep-psi.vercel.app/`
